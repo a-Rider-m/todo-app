@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-font: "Josefin Sans", sans-serif;
+
+    --bg-light: hsl(236, 33%, 92%);
+    --bg-task-light: hsl(0, 0%, 98%);
+    --primary-text-color-light: hsl(235, 19%, 35%);
+    --secondary-text-color-light:hsl(236, 9%, 61%);
+    --complete-task-light: hsl(233, 11%, 84%);
+
+    --bg-dark: hsl(235, 21%, 11%);
+    --bg-task-dark: hsl(235, 24%, 19%);
+    --primary-text-color-dark: hsl(234, 39%, 85%);
+    --secondary-text-color-dark: hsl(234, 11%, 52%);
+    --complete-task-dark: hsl(233, 14%, 35%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--primary-font);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 30%;
+    padding: 60px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-container--light {
+    background-image: url('../../../images/bg-mobile-light.jpg');
+    color: hsl(0, 0%, 98%);
+}
+
+.top-container--dark {
+    background-image: url('../../../images/bg-mobile-dark.jpg'); 
+    color: var(--primary-text-color-dark); 
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+}
+
+.btn-theme {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    
+.btn-theme--light {
+    background-image: url('../../../images/icon-moon.svg');
+}
+
+.btn-theme--dark {
+    background-image: url('../../../images/icon-sun.svg');
+}
+
+.todo-app {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+}
+    
+.todo-app--light {
+    background-color: var(--bg-light);
+}
+
+.todo-app--dark {
+    background-color: var(--bg-dark);
+}
+
+.todo-app__item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.todo-app__item--task {
+    border-radius: 0;
+}
+
+.todo-app__item--light {
+    color: var(--secondary-text-color-light);
+    background-color: var(--bg-task-light);
+}
+
+.todo-app__item--dark {
+    color: var(--secondary-text-color-dark);
+    background-color: var(--bg-task-dark);
+}
+
+.btn-check {
+    display: inline-block;
+    justify-self: end;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    border: var(--secondary-text-color-light) 0.5px solid;
+    border-radius: 50%;
+}
+
+.btn-cross {
+    display: inline-block;
+    justify-self: end;
+    width: 15px;
+    height: 15px;
+    background-image: url('../../../images/icon-cross.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.todo-app__tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.todo-app__tasks--light {
+    background-color: var(--bg-light);
+}
+
+.todo-app__tasks--dark {
+    background-color: var(--bg-dark);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

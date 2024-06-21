@@ -30,11 +30,20 @@ body {
     height: 100vh;
 }
 
-main {
+.main {
     width: 100%;
     height: 100%;
 }
 
+.main--light {
+    color: var(--secondary-text-color-light);
+    background-color: var(--bg-light);
+}
+
+.main--dark {
+    color: var(--secondary-text-color-dark);
+    background-color: var(--bg-dark);
+}
 
 .top-container {
     display: flex;
@@ -86,50 +95,6 @@ main {
     height: auto;
     padding: 0 20px;
 }
-    
-.todo-app--light {
-    background-color: var(--bg-light);
-}
-
-.todo-app--dark {
-    background-color: var(--bg-dark);
-}
-
-.todo-app__item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    padding: 0px 20px;
-    font-size: 1.4rem;
-    font-weight: 400;
-    border-radius: 5px;
-}
-
-.todo-app__item--task {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    border-radius: 0;
-}
-
-.todo-app__item--status {
-    justify-content: space-between;
-}
-
-.todo-app__item--filter {
-    justify-content: center;
-    gap: 20px;
-}
-
-.todo-app__item--light {
-    color: var(--secondary-text-color-light);
-    background-color: var(--bg-task-light);
-}
-
-.todo-app__item--dark {
-    color: var(--secondary-text-color-dark);
-    background-color: var(--bg-task-dark);
-}
 
 .todo-app__tasks {
     display: flex;
@@ -148,6 +113,41 @@ main {
 
 .todo-app__tasks--dark {
     background-color: var(--bg-dark);
+}
+
+.todo-app__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.todo-app__item--task {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    border-radius: 0;
+    color: var(--primary-text-color-light);
+}
+
+.todo-app__item--status {
+    justify-content: space-between;
+}
+
+.todo-app__item--filter {
+    justify-content: center;
+    gap: 20px;
+}
+
+.todo-app__item--light {
+    background-color: var(--bg-task-light);
+}
+
+.todo-app__item--dark {
+    background-color: var(--bg-task-dark);
 }
 
 .btn-check {

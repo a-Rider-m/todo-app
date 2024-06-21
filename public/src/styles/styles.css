@@ -96,8 +96,7 @@ main {
 }
 
 .todo-app__item {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    display: flex;
     align-items: center;
     width: 100%;
     height: 50px;
@@ -108,7 +107,18 @@ main {
 }
 
 .todo-app__item--task {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     border-radius: 0;
+}
+
+.todo-app__item--status {
+    justify-content: space-between;
+}
+
+.todo-app__item--filter {
+    justify-content: center;
+    gap: 20px;
 }
 
 .todo-app__item--light {
@@ -119,27 +129,6 @@ main {
 .todo-app__item--dark {
     color: var(--secondary-text-color-dark);
     background-color: var(--bg-task-dark);
-}
-
-.btn-check {
-    display: inline-block;
-    justify-self: end;
-    width: 25px;
-    height: 25px;
-    margin-right: 15px;
-    border: var(--secondary-text-color-light) 0.5px solid;
-    border-radius: 50%;
-}
-
-.btn-cross {
-    display: inline-block;
-    justify-self: end;
-    width: 15px;
-    height: 15px;
-    background-image: url('../../../images/icon-cross.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .todo-app__tasks {
@@ -159,6 +148,27 @@ main {
 
 .todo-app__tasks--dark {
     background-color: var(--bg-dark);
+}
+
+.btn-check {
+    display: inline-block;
+    justify-self: start;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    border: var(--secondary-text-color-light) 0.5px solid;
+    border-radius: 50%;
+}
+
+.btn-cross {
+    display: inline-block;
+    justify-self: end;
+    width: 15px;
+    height: 15px;
+    background-image: url('../../../images/icon-cross.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .attribution { 

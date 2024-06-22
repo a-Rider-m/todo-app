@@ -150,6 +150,12 @@ body {
     background-color: var(--bg-task-dark);
 }
 
+.todo-app__drag-drop {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
 .btn-check {
     display: inline-block;
     justify-self: start;

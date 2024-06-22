@@ -177,6 +177,19 @@ body {
     background-size: cover;
 }
 
+.footer {
+    width: 100;
+    height: 20px;
+}
+
+.footer--light {
+    background-color: var(--bg-light);
+}
+
+.footer--dark {
+    background-color: var(--bg-dark);
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 

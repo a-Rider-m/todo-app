@@ -33,16 +33,8 @@ body {
 .main {
     width: 100%;
     height: auto;
-}
-
-.main--light {
     color: var(--secondary-text-color-light);
     background-color: var(--bg-light);
-}
-
-.main--dark {
-    color: var(--secondary-text-color-dark);
-    background-color: var(--bg-dark);
 }
 
 .top-container {
@@ -51,19 +43,16 @@ body {
     width: 100%;
     height: 300px;
     padding: 60px 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.top-container--light {
     background-image: url('../../../images/bg-mobile-light.jpg');
     color: hsl(0, 0%, 98%);
 }
 
-.top-container--dark {
-    background-image: url('../../../images/bg-mobile-dark.jpg'); 
-    color: var(--primary-text-color-dark); 
+.top-container,
+.btn-theme,
+.btn-cross {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .title {
@@ -77,17 +66,7 @@ body {
     height: 25px;
     background-color: transparent;
     border: none;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-    
-.btn-theme--light {
     background-image: url('../../../images/icon-moon.svg');
-}
-
-.btn-theme--dark {
-    background-image: url('../../../images/icon-sun.svg');
 }
 
 .todo-app {
@@ -113,14 +92,7 @@ body {
     margin: 20px 0;
     border-radius: 5px;
     overflow: hidden;
-}
-
-.todo-app__tasks--light {
     background-color: var(--bg-light);
-}
-
-.todo-app__tasks--dark {
-    background-color: var(--bg-dark);
 }
 
 .todo-app__item {
@@ -132,6 +104,7 @@ body {
     font-size: 1.4rem;
     font-weight: 400;
     border-radius: 5px;
+    background-color: var(--bg-task-light);
 }
 
 .todo-app__item--task {
@@ -148,14 +121,6 @@ body {
 .todo-app__item--filter {
     justify-content: center;
     gap: 20px;
-}
-
-.todo-app__item--light {
-    background-color: var(--bg-task-light);
-}
-
-.todo-app__item--dark {
-    background-color: var(--bg-task-dark);
 }
 
 .todo-app__drag-drop {
@@ -180,22 +145,12 @@ body {
     width: 15px;
     height: 15px;
     background-image: url('../../../images/icon-cross.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .footer {
     width: 100%;
     height: 20px;
-}
-
-.footer--light {
     background-color: var(--bg-light);
-}
-
-.footer--dark {
-    background-color: var(--bg-dark);
 }
 
 .attribution { 
@@ -205,4 +160,31 @@ body {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/* Dark theme */
+.main.dark-theme {
+    color: var(--secondary-text-color-dark);
+    background-color: var(--bg-dark);
+}
+
+.dark-theme .top-container {
+    background-image: url('../../../images/bg-mobile-dark.jpg'); 
+    color: var(--primary-text-color-dark); 
+}
+
+.dark-theme .btn-theme {
+    background-image: url('../../../images/icon-sun.svg');
+}
+
+.dark-theme .todo-app__tasks {
+    background-color: var(--bg-dark);
+}
+
+.dark-theme .todo-app__item {
+    background-color: var(--bg-task-dark);
+}
+
+.dark-theme .footer {
+    background-color: var(--bg-dark);
 }

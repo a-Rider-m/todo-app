@@ -10,36 +10,34 @@
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 	<title>Frontend Mentor | Todo app</title>
 </head>
-<body>
-	<main class="main">
-		<section class="top-container">
-			<h1 class="title">TODO</h1>
-			<button class="btn-theme"></button>
+<body class="dark-theme">
+	<main class="todo-app">
+		<section class="todo-app__top-container">
+			<h1 class="todo-app__title">TODO</h1>
+			<button class="todo-app__theme-btn"></button>
 		</section>
-		<section class="todo-app todo-app--light">
-			<div class="todo-app__container">
+		<section class="todo-app__main-container">
+			<div class="todo-app__task-container">
 
-				<form class="todo-app__item todo-app__item--light">
-					<span class="btn-check"></span> 
+				<form class="todo-app__new-task">
+					<span class="todo-app__check-btn"></span> 
 					<input type="text" placeholder="Create new todo..."></input>
 				</form>
-
-				<!---->
 	
-				<div class="todo-app__tasks todo-app__tasks--light">
-					<div class="todo-app__item todo-app__item--task todo-app__item--light">
-						<span class="btn-check"></span>
+				<div class="todo-app__tasks-list">
+					<div class="todo-app__new-task todo-app__new-task--task">
+						<span class="todo-app__check-btn"></span>
 						<p>Lorem ipsum dolor sit amet.</p>  
-						<span class="btn-cross"></span>
+						<span class="todo-app__cross-btn"></span>
 					</div>
-	
-					<div class="todo-app__item todo-app__item--status todo-app__item--light">
+
+					<div class="todo-app__new-task todo-app__new-task--status">
 						<p>1 items left</p>
 						<p>Clear Completed</p>
 					</div>
 				</div>
 						
-				<div class="todo-app__item todo-app__item--filter todo-app__item--light">
+				<div class="todo-app__new-task todo-app__new-task--filter">
 					<p>All</p>
 					<p>Active</p>
 					<p>Complete</p>
@@ -49,7 +47,7 @@
 			</div>
 		</section>
 	</main>
-	<footer class="footer footer--light">
+	<footer class="footer">
 		<div class="attribution">
 			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
 			Coded by <a href="#">Your Name Here</a>.

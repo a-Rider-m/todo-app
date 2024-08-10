@@ -30,14 +30,14 @@ body {
     height: auto;
 }
 
-.main {
+.todo-app {
     width: 100%;
     height: auto;
     color: var(--secondary-text-color-light);
     background-color: var(--bg-light);
 }
 
-.top-container {
+.todo-app__top-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -47,21 +47,21 @@ body {
     color: hsl(0, 0%, 98%);
 }
 
-.top-container,
-.btn-theme,
-.btn-cross {
+.todo-app__top-container,
+.todo-app__theme-btn,
+.todo-app__cross-btn {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.title {
+.todo-app__title {
     font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: 1rem;
 }
 
-.btn-theme {
+.todo-app__theme-btn {
     width: 25px;
     height: 25px;
     background-color: transparent;
@@ -69,13 +69,13 @@ body {
     background-image: url('../../../images/icon-moon.svg');
 }
 
-.todo-app {
+.todo-app__main-container {
     position: relative;
     width: 100%;
     height: 600px;
 }
 
-.todo-app__container {
+.todo-app__task-container {
     position: absolute;
     top: -100px;
     width: 100%;
@@ -83,7 +83,7 @@ body {
     padding: 0 20px;
 }
 
-.todo-app__tasks {
+.todo-app__tasks-list {
     display: flex;
     flex-direction: column;
     gap: 1px;
@@ -95,7 +95,7 @@ body {
     background-color: var(--bg-light);
 }
 
-.todo-app__item {
+.todo-app__new-task {
     display: flex;
     align-items: center;
     width: 100%;
@@ -107,20 +107,33 @@ body {
     background-color: var(--bg-task-light);
 }
 
-.todo-app__item--task {
+.todo-app__new-task input {
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.todo-app__new-task input:focus {
+    outline: none;
+}
+
+.todo-app__new-task--task {
     display: grid;
     grid-template-columns: auto 1fr auto;
     border-radius: 0;
     color: var(--primary-text-color-light);
 }
 
-.todo-app__item--status {
+.todo-app__new-task--status {
     justify-content: space-between;
+    border-radius: 0;
 }
 
-.todo-app__item--filter {
+.todo-app__new-task--filter {
     justify-content: center;
     gap: 20px;
+    font-weight: 800;
 }
 
 .todo-app__drag-drop {
@@ -129,7 +142,7 @@ body {
     font-size: 1.4rem;
 }
 
-.btn-check {
+.todo-app__check-btn {
     display: inline-block;
     justify-self: start;
     width: 25px;
@@ -139,12 +152,12 @@ body {
     border-radius: 50%;
 }
 
-.btn-cross {
+.todo-app__cross-btn {
     display: inline-block;
     justify-self: end;
     width: 15px;
     height: 15px;
-    background-image: url('../../../images/icon-cross.svg');
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PHBhdGggZmlsbD0iIzQ5NEM2QiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTYuOTcgMGwuNzA4LjcwN0w5LjU0NiA4Ljg0bDguMTMyIDguMTMyLS43MDcuNzA3LTguMTMyLTguMTMyLTguMTMyIDguMTMyTDAgMTYuOTdsOC4xMzItOC4xMzJMMCAuNzA3LjcwNyAwIDguODQgOC4xMzIgMTYuOTcxIDB6Ii8+PC9zdmc+');
 }
 
 .footer {
@@ -163,26 +176,61 @@ body {
 }
 
 /* Dark theme */
-.main.dark-theme {
-    color: var(--secondary-text-color-dark);
+body.dark-theme {
     background-color: var(--bg-dark);
 }
 
-.dark-theme .top-container {
-    background-image: url('../../../images/bg-mobile-dark.jpg'); 
-    color: var(--primary-text-color-dark); 
+.dark-theme .todo-app {
+    background-color: var(--bg-dark);
 }
 
-.dark-theme .btn-theme {
+.dark-theme .todo-app__top-container {
+    background-image: url('../../../images/bg-mobile-dark.jpg'); 
+}
+
+.dark-theme .todo-app__theme-btn {
     background-image: url('../../../images/icon-sun.svg');
 }
 
-.dark-theme .todo-app__tasks {
-    background-color: var(--bg-dark);
+.dark-theme .todo-app__tasks-list {
+    background-color: #36384e;
 }
 
-.dark-theme .todo-app__item {
+.dark-theme .todo-app__new-task {
     background-color: var(--bg-task-dark);
+}
+
+.dark-theme .todo-app__new-task input {
+    color: var(--primary-text-color-dark);
+}
+
+.dark-theme .todo-app__new-task input::placeholder {
+    color: var(--secondary-text-color-dark);
+}
+
+.dark-theme .todo-app__new-task input:focus {
+    color: var(--primary-text-color-dark);
+    caret-color: var(--primary-text-color-dark);
+}
+
+.dark-theme .todo-app__new-task--task {
+    color: var(--primary-text-color-dark);
+}
+
+.dark-theme .todo-app__new-task--status {
+    color: var(--complete-task-dark);
+}
+
+.dark-theme .todo-app__check-btn {
+    border-color: #494C6B;
+}
+
+.dark-theme .todo-app__new-task--filter {
+    color: var(--secondary-text-color-dark);
+}
+
+.dark-theme .todo-app__drag-drop {
+    color: var(--secondary-text-color-dark);
 }
 
 .dark-theme .footer {

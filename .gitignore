@@ -16,8 +16,8 @@
 .prettierignore
 
 #Designs 
-.design
+design/
 
 #Guide
-.style-guide.md
-.READme-template.md
+style-guide.md
+READme-template.md

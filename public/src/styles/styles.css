@@ -38,12 +38,16 @@ body {
 }
 
 .todo-app__top-container {
+    height: 40vh;
+    background-image: url('../../../images/bg-mobile-light.jpg');
+}
+
+.todo-app__top-container div {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 300px;
     padding: 60px 20px;
-    background-image: url('../../../images/bg-mobile-light.jpg');
     color: hsl(0, 0%, 98%);
 }
 
@@ -234,5 +238,52 @@ body.dark-theme {
 }
 
 .dark-theme .footer {
+    color: var(--primary-text-color-dark);
     background-color: var(--bg-dark);
+}
+
+@media(min-width: 800px) {
+
+    .todo-app {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .todo-app__top-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../../images/bg-desktop-light.jpg');
+    }
+
+    .todo-app__top-container div {
+        max-width: 650px;
+        max-height: 150px;   
+    }
+
+    .todo-app__title {
+        font-size: 4rem;
+    }
+
+    .todo-app__main-container {
+        max-width: 650px;
+        align-self: center;
+    }
+
+    .todo-app__new-task {
+        height: 60px;
+        font-size: 1.6rem;
+    }
+
+    .todo-app__new-task input {
+        font-size: 1.6rem;
+    }
+
+    .attribution {
+        font-size: 1.4rem;
+    }
+
+    .dark-theme .todo-app__top-container {
+        background-image: url('../../../images/bg-desktop-dark.jpg');
+    }
 }

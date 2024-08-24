@@ -279,6 +279,10 @@ body.dark-theme {
         font-size: 1.6rem;
     }
 
+    .todo-app__theme-btn:hover {
+        cursor: pointer;
+    }
+
     .attribution {
         font-size: 1.4rem;
     }

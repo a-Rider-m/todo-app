@@ -73,6 +73,7 @@ body {
     background-color: transparent;
     border: none;
     background-image: url('../../../images/icon-moon.svg');
+    transition: background-image, 0.3s;
 }
 
 .todo-app__main-container {
@@ -157,6 +158,7 @@ body {
     margin-right: 15px;
     border: var(--secondary-text-color-light) 0.5px solid;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .todo-app__cross-btn {

@@ -24,20 +24,20 @@
 		<section class="todo-app__main-container">
 			<div class="todo-app__task-container">
 
-				<form class="todo-app__new-task">
+				<form id="task-form" class="todo-app__new-task">
 					<span class="todo-app__check-btn"></span> 
-					<input type="text" placeholder="Create new todo..."></input>
+					<input id="task-input" type="text" placeholder="Create new todo..."></input>
 				</form>
 	
-				<div class="todo-app__tasks-list">
+				<ul id="task-list" class="todo-app__tasks-list">
 					
-					<div class="todo-app__new-task todo-app__new-task--task">
+					<li class="todo-app__new-task todo-app__new-task--task">
 						<span class="todo-app__check-btn"></span>
 						<p>Lorem ipsum dolor sit amet.</p>  
 						<span class="todo-app__cross-btn"></span>
-					</div>
+					</li>
 
-				</div>
+				</ul>
 				<div class="todo-app__new-task todo-app__new-task--status">
 					<p>1 items left</p>
 					<p>Clear Completed</p>

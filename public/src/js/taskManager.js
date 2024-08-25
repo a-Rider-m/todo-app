@@ -28,7 +28,8 @@ function addNewTask(e) {
     const task = taskInput.value;
 
     if(task) {
-        taskList.append(createTaskElement(task)); 
+        taskList.append(createTaskElement(task));
+        taskInput.value = '';
     };
 }
 

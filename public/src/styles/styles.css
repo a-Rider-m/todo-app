@@ -170,6 +170,11 @@ body {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PHBhdGggZmlsbD0iIzQ5NEM2QiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTYuOTcgMGwuNzA4LjcwN0w5LjU0NiA4Ljg0bDguMTMyIDguMTMyLS43MDcuNzA3LTguMTMyLTguMTMyLTguMTMyIDguMTMyTDAgMTYuOTdsOC4xMzItOC4xMzJMMCAuNzA3LjcwNyAwIDguODQgOC4xMzIgMTYuOTcxIDB6Ii8+PC9zdmc+');
 }
 
+.todo-app__check-btn:hover,
+.todo-app__cross-btn:hover {
+    cursor: pointer;
+}
+
 .footer {
     width: 100%;
     height: 20px;

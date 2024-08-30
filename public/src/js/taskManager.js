@@ -2,8 +2,8 @@ const taskList = document.getElementById('task-list');
 
 function createTaskElement(task) {
     const li = document.createElement('li');
-    const checkContainer = document.createElement('span');
-    const check = document.createElement('span');
+    const checkContainer = document.createElement('div');
+    const check = document.createElement('div');
     const phar = document.createElement('p');
     const cross = document.createElement('span');
 

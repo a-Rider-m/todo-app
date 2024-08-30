@@ -308,6 +308,10 @@ body.dark-theme {
         font-size: 1.6rem;
     }
 
+    .todo-app__check-btn-container:hover {
+        background: linear-gradient(135deg, #57DEFF, #C059F4);
+    }
+
     .attribution {
         font-size: 1.4rem;
     }

@@ -32,6 +32,17 @@ body {
     height: auto;
 }
 
+/* Shared Styles */
+
+.todo-app__top-container,
+.todo-app__theme-btn,
+.todo-app__cross-btn,
+.todo-app__check-btn--complete {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .todo-app {
     width: 100%;
     height: auto;
@@ -51,15 +62,6 @@ body {
     height: 300px;
     padding: 60px 20px;
     color: hsl(0, 0%, 98%);
-}
-
-.todo-app__top-container,
-.todo-app__theme-btn,
-.todo-app__cross-btn,
-.todo-app__check-btn--complete {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .todo-app__title {
@@ -178,11 +180,6 @@ body {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PHBhdGggZmlsbD0iIzQ5NEM2QiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTYuOTcgMGwuNzA4LjcwN0w5LjU0NiA4Ljg0bDguMTMyIDguMTMyLS43MDcuNzA3LTguMTMyLTguMTMyLTguMTMyIDguMTMyTDAgMTYuOTdsOC4xMzItOC4xMzJMMCAuNzA3LjcwNyAwIDguODQgOC4xMzIgMTYuOTcxIDB6Ii8+PC9zdmc+');
 }
 
-.todo-app__check-btn-container:hover,
-.todo-app__cross-btn:hover {
-    cursor: pointer;
-}
-
 .footer {
     width: 100%;
     height: 20px;
@@ -269,6 +266,13 @@ body.dark-theme {
 
 @media(min-width: 800px) {
 
+    /* Shared Styles */
+    .todo-app__check-btn-container:hover,
+    .todo-app__cross-btn:hover,
+    .todo-app__theme-btn:hover {
+        cursor: pointer;
+    }
+
     .todo-app {
         display: flex;
         flex-direction: column;
@@ -302,10 +306,6 @@ body.dark-theme {
 
     .todo-app__new-task input {
         font-size: 1.6rem;
-    }
-
-    .todo-app__theme-btn:hover {
-        cursor: pointer;
     }
 
     .attribution {

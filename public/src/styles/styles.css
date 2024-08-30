@@ -195,12 +195,23 @@ body {
     color: hsl(228, 45%, 44%); 
 }
 
-.innactive {
-    display: none;
+/* Light Complete States */
+
+.complete .todo-app__check-btn-container {
+    background: linear-gradient(135deg, #57DEFF, #C059F4);
 }
 
-/* Complete State */
+.complete .todo-app__check {
+    width: 11px;
+    height: 9px;
+    background-color: transparent;
+    background-image: url('../../../images/icon-check.svg');
+}
 
+.complete .todo-app__text {
+    color: var(--complete-task-light);
+    text-decoration: line-through;
+}
 
 /* Dark theme */
 body.dark-theme {
@@ -247,8 +258,12 @@ body.dark-theme {
     color: var(--complete-task-dark);
 }
 
-.dark-theme .todo-app__check-btn {
-    border-color: #494C6B;
+.dark-theme .todo-app__check-btn-container {
+    background-color: #494C6B;
+}
+
+.dark-theme .todo-app__check {
+    background-color: var(--bg-task-dark);
 }
 
 .dark-theme .todo-app__new-task--filter {
@@ -262,6 +277,20 @@ body.dark-theme {
 .dark-theme .footer {
     color: var(--primary-text-color-dark);
     background-color: var(--bg-dark);
+}
+
+/* Complete States Dark Theme */
+
+.dark-theme .complete .todo-app__check {
+    background-color: transparent;
+}
+
+.dark-theme .complete .todo-app__text {
+    color: var(--complete-task-dark);
+}
+
+.innactive {
+    display: none;
 }
 
 @media(min-width: 800px) {

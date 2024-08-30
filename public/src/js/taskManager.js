@@ -2,17 +2,21 @@ const taskList = document.getElementById('task-list');
 
 function createTaskElement(task) {
     const li = document.createElement('li');
+    const checkContainer = document.createElement('span');
     const check = document.createElement('span');
     const phar = document.createElement('p');
     const cross = document.createElement('span');
 
     li.classList.add('todo-app__new-task', 'todo-app__new-task--task'); 
-    check.classList = 'todo-app__check-btn';
+    checkContainer.classList = 'todo-app__check-btn-container';
+    check.classList = 'todo-app__check';
     phar.textContent = task;
     cross.classList = 'todo-app__cross-btn';
 
+    checkContainer.append(check);
+    
     li.append(
-        check,
+        checkContainer,
         phar,
         cross
     );

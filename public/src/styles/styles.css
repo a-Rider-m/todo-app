@@ -55,7 +55,8 @@ body {
 
 .todo-app__top-container,
 .todo-app__theme-btn,
-.todo-app__cross-btn {
+.todo-app__cross-btn,
+.todo-app__check-btn--complete {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -151,15 +152,22 @@ body {
     font-size: 1.4rem;
 }
 
-.todo-app__check-btn {
-    display: inline-block;
-    justify-self: start;
+.todo-app__check-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 25px;
     height: 25px;
     margin-right: 15px;
-    border: var(--secondary-text-color-light) 0.5px solid;
+    background: var(--bg-light);
     border-radius: 50%;
-    overflow: hidden;
+}
+
+.todo-app__check {
+    width: 21px;
+    height: 21px;
+    background-color: var(--bg-task-light);
+    border-radius: 50%;
 }
 
 .todo-app__cross-btn {
@@ -170,7 +178,7 @@ body {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PHBhdGggZmlsbD0iIzQ5NEM2QiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTYuOTcgMGwuNzA4LjcwN0w5LjU0NiA4Ljg0bDguMTMyIDguMTMyLS43MDcuNzA3LTguMTMyLTguMTMyLTguMTMyIDguMTMyTDAgMTYuOTdsOC4xMzItOC4xMzJMMCAuNzA3LjcwNyAwIDguODQgOC4xMzIgMTYuOTcxIDB6Ii8+PC9zdmc+');
 }
 
-.todo-app__check-btn:hover,
+.todo-app__check-btn-container:hover,
 .todo-app__cross-btn:hover {
     cursor: pointer;
 }

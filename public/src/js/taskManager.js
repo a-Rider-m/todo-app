@@ -37,15 +37,4 @@ function addNewTask(e) {
     };
 }
 
-function configTaskForm(idForm) {
-    const form = document.getElementById(idForm);
-
-    if(form) {
-        form.addEventListener('submit', addNewTask);
-
-    } else {
-        console.error(`A form with the id ${idForm} was not found.`);
-    }
-}
-
-export { configTaskForm };
+export { addNewTask };

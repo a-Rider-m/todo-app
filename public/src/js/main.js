@@ -1,8 +1,8 @@
-import { configButtonTheme } from "./toggle-theme.js";
-import { configTaskForm } from "./taskManager.js";
+import { toggleTheme } from "./toggle-theme.js";
+import { addNewTask } from "./taskManager.js";
 
-//theme toggle
-configButtonTheme('toggle-btn');
+const themeBtn = document.getElementById('toggle-btn');
+themeBtn.addEventListener('click', toggleTheme);
 
-//Task List
-configTaskForm('task-form');
+const form = document.getElementById('task-form');
+form.addEventListener('submit', addNewTask);

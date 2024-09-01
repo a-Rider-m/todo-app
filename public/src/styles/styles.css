@@ -208,6 +208,10 @@ body {
     background-image: url('../../../images/icon-check.svg');
 }
 
+.complete .todo-app__cross-btn {
+    display: none;
+}
+
 .complete .todo-app__text {
     color: var(--complete-task-light);
     text-decoration: line-through;
@@ -287,10 +291,6 @@ body.dark-theme {
 
 .dark-theme .complete .todo-app__text {
     color: var(--complete-task-dark);
-}
-
-.innactive {
-    display: none;
 }
 
 @media(min-width: 800px) {

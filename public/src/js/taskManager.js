@@ -8,13 +8,16 @@ function createTaskElement(task) {
     const cross = document.createElement('span');
 
     li.classList.add('todo-app__new-task', 'todo-app__new-task--task'); 
-    checkContainer.classList = 'todo-app__check-btn-container';
+    checkContainer.classList.add('todo-app__check-btn-container', 'task-check-btn');
     check.classList = 'todo-app__check';
+
+    phar.classList = 'todo-app__text';
     phar.textContent = task;
+
     cross.classList = 'todo-app__cross-btn';
 
     checkContainer.append(check);
-    
+
     li.append(
         checkContainer,
         phar,
@@ -26,7 +29,7 @@ function createTaskElement(task) {
 
 function addNewTask(e) {
     e.preventDefault();
-        
+
     const taskInput = document.getElementById('task-input');
 
     const task = taskInput.value;
@@ -37,4 +40,9 @@ function addNewTask(e) {
     };
 }
 
-export { addNewTask };
+function markTaskAsCompleted(e) {
+    const liItem = e.parentElement.parentElement
+    liItem.classList.toggle('complete');
+}
+
+export { addNewTask, markTaskAsCompleted };

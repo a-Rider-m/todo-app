@@ -1,5 +1,5 @@
 import { toggleTheme } from "./toggle-theme.js";
-import { addNewTask, markTaskAsCompleted } from "./taskManager.js";
+import { addNewTask, markTaskAsCompleted, deleteTask } from "./taskManager.js";
 
 const themeBtn = document.getElementById('toggle-btn');
 themeBtn.addEventListener('click', toggleTheme);
@@ -13,7 +13,7 @@ taskList.addEventListener('click', (e) => {
     if(e.target.classList.contains('todo-app__check')) {
         markTaskAsCompleted(e.target);
     } else if(e.target.classList.contains('todo-app__cross-btn')) {
-        editTask(e.target.parentElement);
+        deleteTask(e.target.parentElement);
     }
 });
 

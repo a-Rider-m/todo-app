@@ -45,4 +45,10 @@ function markTaskAsCompleted(e) {
     liItem.classList.toggle('complete');
 }
 
-export { addNewTask, markTaskAsCompleted };
+function deleteTask(taskItem) {
+    if(confirm('Estás seguro de borrar este elemento?')) {
+        taskItem.remove();
+    }
+}
+
+export { addNewTask, markTaskAsCompleted, deleteTask};

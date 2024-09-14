@@ -13,9 +13,10 @@
 <body>
 	<main class="todo-app">
 		<section class="todo-app__top-container">
-			<div class="">
+			<div>
 				<h1 class="todo-app__title">TODO</h1>
-				<button id="toggle-btn" 
+				<button 
+				id="toggle-btn" 
 				class="todo-app__theme-btn"
 				type="button" 
 				aria-label="toggle to light theme"></button>
@@ -24,10 +25,13 @@
 		<section class="todo-app__main-container">
 			<div class="todo-app__task-container">
 
-				<form id="task-form" class="todo-app__new-task">
-					<div class="todo-app__check-btn-container">
-						<div class="todo-app__check"></div>
+				<form 
+				id="task-form" 
+				class="todo-app__task-item">
+					<div class="todo-app__check-btn">
+						<div></div>
 					</div> 
+					
 					<input id="task-input" type="text" placeholder="Create new todo..."></input>
 				</form>
 	

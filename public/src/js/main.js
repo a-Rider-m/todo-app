@@ -16,5 +16,3 @@ taskList.addEventListener('click', (e) => {
         deleteTask(e.target.parentElement);
     }
 });
-
-//Necesito resolver el como generar addeventlistener a cada boton cuando se genera el li

@@ -1,3 +1,4 @@
+/* General */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -105,26 +106,25 @@ body {
     background-color: var(--bg-light);
 }
 
-.todo-app__new-task {
+.todo-app__task-item {
     display: flex;
     align-items: center;
     width: 100%;
     height: 50px;
     padding: 0px 20px;
-    font-size: 1.4rem;
-    font-weight: 400;
     border-radius: 5px;
     background-color: var(--bg-task-light);
 }
 
-.todo-app__new-task input {
+.todo-app__task-item input {
+    width: 100%;
     background-color: transparent;
     border: none;
     font-size: 1.4rem;
     font-weight: 400;
 }
 
-.todo-app__new-task input:focus {
+.todo-app__task-item input:focus {
     outline: none;
     caret-color: var(--active-color);
 }
@@ -154,7 +154,7 @@ body {
     font-size: 1.4rem;
 }
 
-.todo-app__check-btn-container {
+.todo-app__check-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +165,7 @@ body {
     border-radius: 50%;
 }
 
-.todo-app__check {
+.todo-app__check-btn div {
     width: 21px;
     height: 21px;
     background-color: var(--bg-task-light);
@@ -197,11 +197,11 @@ body {
 
 /* Light Complete States */
 
-.complete .todo-app__check-btn-container {
+.complete .todo-app__check-btn {
     background: linear-gradient(135deg, #57DEFF, #C059F4);
 }
 
-.complete .todo-app__check {
+.complete .todo-app__check-btn div {
     width: 11px;
     height: 9px;
     background-color: transparent;

@@ -10,7 +10,7 @@ form.addEventListener('submit', addNewTask);
 const taskList = document.getElementById('task-list');
 
 taskList.addEventListener('click', (e) => {
-    if(e.target.classList.contains('todo-app__check')) {
+    if(e.target.classList.contains('inner-check')) {
         markTaskAsCompleted(e.target);
     } else if(e.target.classList.contains('todo-app__cross-btn')) {
         deleteTask(e.target.parentElement);

@@ -94,7 +94,7 @@ body {
     padding: 0 20px;
 }
 
-.todo-app__tasks-list {
+.todo-app__task-list {
     display: flex;
     flex-direction: column;
     gap: 1px;
@@ -107,12 +107,15 @@ body {
 }
 
 .todo-app__task-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     width: 100%;
     height: 50px;
     padding: 0px 20px;
-    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--primary-text-color-light);
     background-color: var(--bg-task-light);
 }
 
@@ -129,23 +132,22 @@ body {
     caret-color: var(--active-color);
 }
 
-.todo-app__new-task--task {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    border-radius: 0;
-    color: var(--primary-text-color-light);
+.todo-app__task-item--form {
+    display: flex;
+    border-radius: 5px;
 }
 
-.todo-app__new-task--status {
+.todo-app__task-item--status {
     justify-content: space-between;
     margin-bottom: 20px;
     border-radius: 0 0 5px 5px;
 }
 
-.todo-app__new-task--filter {
+.todo-app__task-item--filter {
     justify-content: center;
     gap: 20px;
     font-weight: 800;
+    border-radius: 5px;
 }
 
 .todo-app__drag-drop {
@@ -195,13 +197,17 @@ body {
     color: hsl(228, 45%, 44%); 
 }
 
+.inactive {
+    display: none;
+}
+
 /* Light Complete States */
 
 .complete .todo-app__check-btn {
     background: linear-gradient(135deg, #57DEFF, #C059F4);
 }
 
-.complete .todo-app__check-btn div {
+.complete .todo-app__check-btn .inner-check {
     width: 11px;
     height: 9px;
     background-color: transparent;
@@ -234,48 +240,48 @@ body.dark-theme {
     background-image: url('../../../images/icon-sun.svg');
 }
 
-.dark-theme .todo-app__tasks-list {
+.dark-theme .todo-app__task-list {
     background-color: #36384e;
 }
 
-.dark-theme .todo-app__new-task {
+.dark-theme .todo-app__task-item {
     background-color: var(--bg-task-dark);
 }
 
-.dark-theme .todo-app__new-task input {
+.dark-theme .todo-app__task-item input {
     color: var(--primary-text-color-dark);
 }
 
-.dark-theme .todo-app__new-task input::placeholder {
+.dark-theme .todo-app__task-item input::placeholder {
     color: var(--secondary-text-color-dark);
 }
 
-.dark-theme .todo-app__new-task input:focus {
+.dark-theme .todo-app__task-item input:focus {
     color: var(--primary-text-color-dark);
 }
 
-.dark-theme .todo-app__new-task--task {
+.dark-theme .todo-app__task-item--task {
     color: var(--primary-text-color-dark);
 }
 
-.dark-theme .todo-app__new-task--status {
+.dark-theme .todo-app__task-item--status {
     color: var(--complete-task-dark);
 }
 
-.dark-theme .todo-app__check-btn-container {
-    background-color: #494C6B;
-}
-
-.dark-theme .todo-app__check {
-    background-color: var(--bg-task-dark);
-}
-
-.dark-theme .todo-app__new-task--filter {
+.dark-theme .todo-app__task-item--filter {
     color: var(--secondary-text-color-dark);
 }
 
 .dark-theme .todo-app__drag-drop {
     color: var(--secondary-text-color-dark);
+}
+
+.dark-theme .todo-app__check-btn {
+    background-color: #494C6B;
+}
+
+.dark-theme .todo-app__check-btn .inner-check {
+    background-color: var(--bg-task-dark);
 }
 
 .dark-theme .footer {
@@ -285,7 +291,7 @@ body.dark-theme {
 
 /* Complete States Dark Theme */
 
-.dark-theme .complete .todo-app__check {
+.dark-theme .complete .todo-app__check-btn div {
     background-color: transparent;
 }
 
@@ -296,7 +302,7 @@ body.dark-theme {
 @media(min-width: 800px) {
 
     /* Shared Styles */
-    .todo-app__check-btn-container:hover,
+    .todo-app__check-btn--light-border:hover,
     .todo-app__cross-btn:hover,
     .todo-app__theme-btn:hover {
         cursor: pointer;
@@ -328,16 +334,20 @@ body.dark-theme {
         align-self: center;
     }
 
-    .todo-app__new-task {
+    .todo-app__task-item {
         height: 60px;
         font-size: 1.6rem;
     }
 
-    .todo-app__new-task input {
+    .todo-app__task-item input {
         font-size: 1.6rem;
     }
 
-    .todo-app__check-btn-container:hover {
+    .todo-app__task-item--status {
+        display: flex;
+    }
+
+    .todo-app__check-btn--light-border:hover {
         background: linear-gradient(135deg, #57DEFF, #C059F4);
     }
 

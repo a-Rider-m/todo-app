@@ -7,9 +7,9 @@ function createTaskElement(task) {
     const phar = document.createElement('p');
     const cross = document.createElement('span');
 
-    li.classList.add('todo-app__new-task', 'todo-app__new-task--task'); 
-    checkContainer.classList.add('todo-app__check-btn-container', 'task-check-btn');
-    check.classList = 'todo-app__check';
+    li.classList.add('todo-app__task-item'); 
+    checkContainer.classList.add('todo-app__check-btn' ,'todo-app__check-btn--light-border');
+    check.classList = 'inner-check';
 
     phar.classList = 'todo-app__text';
     phar.textContent = task;

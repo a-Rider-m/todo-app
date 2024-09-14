@@ -27,23 +27,27 @@
 
 				<form 
 				id="task-form" 
-				class="todo-app__task-item">
+				class="todo-app__task-item todo-app__task-item--form">
 					<div class="todo-app__check-btn">
-						<div></div>
+						<div class="inner-check"></div>
 					</div> 
 					
 					<input id="task-input" type="text" placeholder="Create new todo..."></input>
 				</form>
 	
-				<ul id="task-list" class="todo-app__tasks-list">
-					
-					<!-- <li class="todo-app__new-task todo-app__new-task--task complete">
-						<div class="task-check-btn todo-app__check-btn-container">
-							<div class="todo-app__check"></div>
+				<ul id="task-list" class="todo-app__task-list">
+					<li class="todo-app__task-item">
+						<div class="todo-app__check-btn todo-app__check-btn--light-border">
+							<div class="inner-check"></div>
 						</div>
-						<p class="todo-app__text">Lorem ipsum dolor sit amet.</p>  
-						<div class="todo-app__cross-btn innactive"></div>
+
+						<p type="text" class="todo-app__text">Lorem ipsum dolor sit amet.</p>
+						<input class="inactive" type="text">  
+
+						<div class="todo-app__cross-btn"></div>
+
 					</li>
+					<!-- 
 
 					<li class="todo-app__new-task todo-app__new-task--task">
 						<div class="task-check-btn todo-app__check-btn-container">
@@ -54,12 +58,12 @@
 					</li> -->
 
 				</ul>
-				<div class="todo-app__new-task todo-app__new-task--status">
+				<div class="todo-app__task-item todo-app__task-item--status">
 					<p>1 items left</p>
 					<p>Clear Completed</p>
 				</div>
 						
-				<div class="todo-app__new-task todo-app__new-task--filter">
+				<div class="todo-app__task-item todo-app__task-item--filter">
 					<p>All</p>
 					<p>Active</p>
 					<p>Complete</p>
